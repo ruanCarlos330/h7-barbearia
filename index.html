@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>H7 Barbearia</title>
+<link rel="icon" href="logo-h7.png">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #080808;
+  padding: 15px 5%;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: radial-gradient(#292929, #080808 75%);
+}
+
+.hero img {
+  width: 210px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 9vw, 85px);
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #999;
+}
+
+.hero p {
+  color: #bbb;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ccc;
+}
+
+section {
+  padding: 70px 6%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 35px;
+}
+
+.servicos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.card {
+  background: #151515;
+  border: 1px solid #333;
+  padding: 28px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.preco {
+  font-size: 25px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.agendamento {
+  background: #111;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: #191919;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 8px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  background: #080808;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input:focus, select:focus {
+  outline: 1px solid white;
+}
+
+form button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.aviso {
+  color: #aaa;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.contato {
+  text-align: center;
+  line-height: 2;
+}
+
+.contato a {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #333;
+  color: #888;
+  font-size: 13px;
+}
+
+@media(max-width: 600px) {
+  header {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  nav a {
+    margin-left: 7px;
+    font-size: 11px;
+  }
+
+  .servicos {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo-h7.png" alt="H7 Barbearia">
+    H7 BARBEARIA
+  </div>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#agendar">Agendar</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div>
+    <img src="logo-h7.png" alt="Logo H7 Barbearia">
+
+    <p>RIO VERDE • GOIÁS</p>
+
+    <h1>SEU ESTILO.<br>
+    <span>SEU CORTE.</span></h1>
+
+    <p>Qualidade, estilo e atendimento diferenciado.</p>
+
+    <a href="#agendar" class="btn">
+      AGENDAR HORÁRIO
+    </a>
+  </div>
+
+</section>
+
+<section id="servicos">
+
+  <h2>NOSSOS SERVIÇOS</h2>
+  <p class="subtitulo">Confira nossos preços</p>
+
+  <div class="servicos">
+
+    <div class="card">
+      <div>
+        <h3>Degradê</h3>
+        <p>Corte e acabamento.</p>
+      </div>
+      <div class="preco">R$ 35</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Barba</h3>
+        <p>Alinhamento e acabamento.</p>
+      </div>
+      <div class="preco">R$ 20</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="agendamento" id="agendar">
+
+  <h2>AGENDE SEU HORÁRIO</h2>
+
+  <p class="subtitulo">
+    Escolha o serviço, a data e o horário desejado.
+  </p>
+
+  <form id="formAgendamento">
+
+    <label for="nome">Seu nome</label>
+    <input
+      type="text"
+      id="nome"
+      placeholder="Digite seu nome"
+      required
+    >
+
+    <label for="servico">Escolha o serviço</label>
+
+    <select id="servico" required>
+      <option value="">Selecione</option>
+      <option>Degradê - R$ 35</option>
+      <option>Barba - R$ 20</option>
+      <option>Degradê + Barba - R$ 55</option>
+    </select>
+
+    <label for="data">Escolha a data</label>
+
+    <input
+      type="date"
+      id="data"
+      required
+    >
+
+    <label for="horario">Escolha o horário</label>
+
+    <select id="horario" required>
+      <option value="">Selecione o horário</option>
+      <option>08:00</option>
+      <option>08:30</option>
+      <option>09:00</option>
+      <option>09:30</option>
+      <option>10:00</option>
+      <option>10:30</option>
+      <option>11:00</option>
+      <option>11:30</option>
+      <option>13:00</option>
+      <option>13:30</option>
+      <option>14:00</option>
+      <option>14:30</option>
+      <option>15:00</option>
+      <option>15:30</option>
+      <option>16:00</option>
+      <option>16:30</option>
+      <option>17:00</option>
+      <option>17:30</option>
+      <option>18:00</option>
+    </select>
+
+    <button type="submit" class="btn">
+      AGENDAR PELO WHATSAPP
+    </button>
+
+    <p class="aviso">
+      O horário será confirmado após a resposta do barbeiro.
+    </p>
+
+  </form>
+
+</section>
+
+<section id="contato" class="contato">
+
+  <h2>H7 BARBEARIA</h2>
+
+  <p>Rio Verde - Goiás</p>
+  <p>Barbeiro: Heriky</p>
+  <p>WhatsApp: (64) 98102-6243</p>
+
+  <p>
+    Instagram:
+    <a href="https://www.instagram.com/h7barbearia/"
+       target="_blank">
+       @h7barbearia
+    </a>
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+  © <span id="ano"></span> H7 Barbearia.
+  Todos os direitos reservados.
+</footer>
+
+<script>
+
+// WHATSAPP DO BARBEIRO HERIKY
+const whatsapp = "5564981026243";
+
+// DATA: permite qualquer data futura
+const campoData = document.getElementById("data");
+
+const hoje = new Date();
+
+const dataAtual = new Date(
+  hoje.getTime() - hoje.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+campoData.min = dataAtual;
+
+document.getElementById("ano").textContent =
+  new Date().getFullYear();
+
+// ENVIO DO AGENDAMENTO
+document.getElementById("formAgendamento")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const nome =
+    document.getElementById("nome").value.trim();
+
+  const servico =
+    document.getElementById("servico").value;
+
+  const data =
+    campoData.value;
+
+  const horario =
+    document.getElementById("horario").value;
+
+  if (!nome || !servico || !data || !horario) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  const partes = data.split("-");
+
+  const dataFormatada =
+    `${partes[2]}/${partes[1]}/${partes[0]}`;
+
+  const mensagem =
+    `Olá, Heriky! Gostaria de agendar na H7 Barbearia.\n\n` +
+    `Nome: ${nome}\n` +
+    `Serviço: ${servico}\n` +
+    `Data: ${dataFormatada}\n` +
+    `Horário: ${horario}\n\n` +
+    `Aguardo a confirmação!`;
+
+  const link =
+    `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(link, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
